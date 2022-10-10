@@ -5,13 +5,12 @@ interface CourseProps {
   courseImg: any,
   title: string,
   content: string,
-  pillTextDuration?: string,
-  pillTextType: string,
+  awardedDate: string,
 
 }
 
 
-export function NewCourseItem({ courseImg, title, content,pillTextDuration, pillTextType }:CourseProps) {
+export function CertificateItem({ courseImg, title, content, awardedDate }:CourseProps) {
   return(
     <Container>
       <img src={courseImg} alt="" />
@@ -19,8 +18,7 @@ export function NewCourseItem({ courseImg, title, content,pillTextDuration, pill
         <h2>{title}</h2>
         <p>{content}</p>
         <div className="pills">
-          <button>{pillTextDuration}</button>
-          <button>{pillTextType}</button>
+          <button>{awardedDate}</button>
         </div>
       </div>
     </Container>
